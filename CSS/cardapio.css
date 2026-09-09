@@ -1,0 +1,148 @@
+/* Layout and visual styles exclusive to the menu page. */
+.cardapio {
+	width: min(92%, 1100px);
+	margin: 56px auto 72px;
+}
+
+.cardapio h2 {
+	position: relative;
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(32px, 4vw, 44px);
+	line-height: 1.1;
+	margin: 0 0 42px;
+	text-align: center;
+	color: #fb9f95;
+}
+
+.cardapio h2::after {
+	content: '';
+	display: block;
+	width: 58px;
+	height: 3px;
+	margin: 14px auto 0;
+	border-radius: 999px;
+	background-color: #fb9f95;
+}
+
+.cardapio .menu-cardapio-itens {
+	gap: 28px;
+}
+
+.cardapio .menu-cardapio-item {
+	min-height: 100%;
+	padding: 14px;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cardapio .menu-cardapio-item:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 12px 22px rgba(30, 9, 5, 0.28),
+		0 20px 34px rgba(30, 9, 5, 0.22),
+		inset 0 0 0 2px rgba(255, 255, 255, 0.16);
+}
+
+.cardapio .menu-cardapio-item h3 {
+	min-height: 58px;
+	display: grid;
+	place-items: center;
+	font-size: clamp(21px, 2vw, 25px);
+	line-height: 1.15;
+}
+
+.cardapio .menu-cardapio-item img {
+	aspect-ratio: 4 / 3;
+	margin-bottom: 18px;
+}
+
+.cardapio .menu-cardapio-item p {
+	min-height: 52px;
+	line-height: 1.45;
+}
+
+.cardapio .menu-cardapio-item h4 {
+	font-size: 28px;
+	margin: 18px 0 0;
+}
+
+.fazer-pedido {
+	text-align: center;
+}
+
+.fazer-pedido button {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: transparent;
+	color: #fb9f95;
+	border: 1px solid #fb9f95;
+	font-family: 'Lora', serif;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fazer-pedido button:hover,
+.fazer-pedido button:focus-visible {
+	background-color: #fb9f95;
+	color: #1e0905;
+}
+
+@media (max-width: 540px) {
+	.cardapio {
+		width: calc(100% - 32px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.hide {
+    display: none;
+}
+
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.modal h2 {
+	margin: 0 0 14px;
+	color: #1e0905;
+	font-size: 26px;
+}
+
+.modal p {
+	margin: 0 0 20px;
+	color: #1e0905;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.modal button {
+	border: 0;
+	border-radius: 6px;
+	padding: 8px 16px;
+	background-color: #fb9f95;
+	color: #1e0905;
+	cursor: pointer;
+}
+

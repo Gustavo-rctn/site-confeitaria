@@ -33,6 +33,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 18px;
+    padding: 20px 24px;
 }
 
 .logotipo {
@@ -84,10 +86,17 @@ ul {
 }
 
 h1{
+    width: 100%;
+    max-width: 720px;
     font-size: 45px;
+    line-height: 1.05;
     color: #fb9f95;
     text-align: center;
     font-family: 'Playfair Display', serif;
+}
+
+.div-menu br {
+    display: none;
 }
 
 @media (max-width: 640px) {
@@ -108,10 +117,7 @@ h1{
 
     .div-menu {
         gap: 18px;
-    }
-
-    .div-menu br {
-        display: none;
+        padding: 0;
     }
 
     ul {
@@ -168,25 +174,6 @@ p {
     line-height: 1.6;
     margin-top: 10px;
 }
-.cardapio {
-    width: min(92%, 1100px);
-    margin: 42px auto;
-}
-
-.cardapio h2 {
-    font-size: 35px;
-    margin-top: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fb9f95;
-}
-
-.menu-cardapio-itens {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-
-}
 .sobre h2 {
     font-size: 35px;
     margin-top: 30px;
@@ -202,9 +189,84 @@ p {
     color: #fb9f95;
 }
 
+.cardapio {
+    width: min(92%, 1100px);
+    margin: 64px auto;
+    padding: 34px 28px 38px;
+    border-top: 1px solid rgba(251, 159, 149, 0.45);
+    border-bottom: 1px solid rgba(251, 159, 149, 0.45);
+}
+
+.cardapio h2 {
+    position: relative;
+    margin: 0 0 38px;
+    color: #fb9f95;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.1;
+    text-align: center;
+}
+
+.cardapio h2::after {
+    content: '';
+    display: block;
+    width: 58px;
+    height: 3px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background-color: #fb9f95;
+}
+
+.page-content {
+    width: min(92%, 760px);
+    min-height: 300px;
+    margin: 64px auto;
+    padding: 36px 42px;
+    text-align: center;
+    background-color: rgba(30, 9, 5, 0.72);
+    border: 2px solid rgba(251, 159, 149, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 16px 32px rgba(30, 9, 5, 0.22);
+}
+
+.page-content h2 {
+    margin-top: 0;
+    color: #fb9f95;
+}
+
+.page-content p {
+    color: #f8d5cf;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px 28px;
+    margin-top: 28px;
+}
+
+.contact-links a {
+    color: #fb9f95;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+    color: #ffffff;
+}
+
+.menu-cardapio-itens {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
 
 .menu-cardapio-item {
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
     background-color: #1e0905;
     border: 3px solid #fb9f95;
     border-radius: 12px;
@@ -213,14 +275,122 @@ p {
     box-shadow: 0 8px 16px rgba(30, 9, 5, 0.22),
         0 14px 28px rgba(30, 9, 5, 0.2),
         inset 0 0 0 2px rgba(255, 255, 255, 0.16);
-    h3 {
-        font-size: 25px;
-        color: #fb9f95;
-        margin-bottom: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cardapio .menu-cardapio-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 22px rgba(30, 9, 5, 0.28),
+        0 20px 34px rgba(30, 9, 5, 0.22),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.16);
+}
+
+.menu-cardapio-item h3 {
+    min-height: 58px;
+    display: grid;
+    place-items: center;
+    font-size: clamp(21px, 2vw, 25px);
+    line-height: 1.15;
+    color: #fb9f95;
+    margin: 4px 0 14px;
+}
+
+.menu-cardapio-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+
+.menu-cardapio-item p {
+    min-height: 52px;
+    font-size: 16px;
+    color: #fb9f95;
+    margin-top: auto;
+}
+
+.cardapio .menu-cardapio-item a {
+    display: inline-block;
+    align-self: center;
+    margin-top: 18px;
+    padding: 8px 16px;
+    border: 1px solid #fb9f95;
+    border-radius: 999px;
+    color: #fb9f95;
+    font-size: 14px;
+    text-decoration: none;
+    animation: buttonFade 2.8s ease-in-out infinite;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.cardapio .menu-cardapio-item:nth-child(2) a {
+    animation-delay: 0.35s;
+}
+
+.cardapio .menu-cardapio-item:nth-child(3) a {
+    animation-delay: 0.7s;
+}
+
+.cardapio .menu-cardapio-item a:hover,
+.cardapio .menu-cardapio-item a:focus-visible {
+    background-color: #fb9f95;
+    color: #1e0905;
+}
+
+@keyframes buttonFade {
+    0%,
+    100% {
+        opacity: 0.4;
     }
-    p {
-        font-size: 16px;
-        color: #fb9f95;
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cardapio .menu-cardapio-item a {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+.menu-cardapio-item h4 {
+    margin: 18px 0 12px;
+    color: #fb9f95;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 36px;
+    }
+    .menu-cardapio-itens {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 540px) {
+    .sobre,
+    .cardapio {
+        width: calc(100% - 32px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cardapio {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .menu-cardapio-itens {
+        grid-template-columns: 1fr;
     }
 }
 

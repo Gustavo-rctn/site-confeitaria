@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/cardapio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="div-logo">
+            <img class="logotipo" src="../IMG/logo.png" alt="LogoTipo da Confeitaria">
+        </div>
+        <div class="div-menu">
+            <h1>Confeitaria sempre doce</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="cardapio.html">Cardápio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cardapio">
+        <h2>Cardápio</h2>
+        <div class="menu-cardapio-itens">
+            <div class="menu-cardapio-item">
+                <h3>Bolo de Chocolate</h3>
+                <img src="../IMG/bolo1.jpg" alt="Bolo de Chocolate">
+                <p>Um clássico irresistível
+                    com camadas de chocolate
+                </p>
+                <h4>R$ 55,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="menu-cardapio-item">
+                <h3>Bolo de Morango</h3>
+                <img src="../IMG/bolo2.jpg" alt="Bolo de Morango">
+                <p>Delicioso bolo com morangos frescos
+                    e cobertura de chantilly
+                </p>
+                <h4>R$ 80,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="menu-cardapio-item">
+                <h3>Bolo kinder bueno</h3>
+                <img src="../IMG/bolo3.jpg" alt="Bolo Kinder Bueno">
+                <p>Um bolo elegante com sabor único
+                    e cobertura cremosa
+                </p>
+                <h4>R$ 105,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="menu-cardapio-item">
+                <h3>Bolo de Cenoura</h3>
+                <img src="../IMG/bolo_cenoura.jpg" alt="Bolo de Cenoura com cobertura de chocolate">
+                <p>Bolo macio de cenoura com uma deliciosa cobertura de chocolate</p>
+                <h4>R$ 48,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="menu-cardapio-item">
+                <h3>Bolo de Coco</h3>
+                <img src="../IMG/bolo_coco_avela.jpg" alt="Bolo de Coco & Avelã">
+                <p>Massa leve com coco e cobertura cremosa para deixar tudo mais gostoso</p>
+                <h4>R$ 62,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+            <div class="menu-cardapio-item">
+                <h3>Bolo de Leite Ninho</h3>
+                <img src="../IMG/bolo_abacaxi.jpg" alt="Bolo de Abacaxi & Leite Ninho">
+                <p>Recheio cremoso de leite Ninho & Abacaxi em uma receita delicada e especial</p>
+                <h4>R$ 89,90</h4>
+                <div class="fazer-pedido">
+                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="fade" class="hide">
+
+    </div>
+
+    <div id="modal" class="hide">
+        <div>
+            <h2>Realizar pagamento</h2>
+            <p>Entre em contato para confirmar seu pedido e receber as formas de pagamento.</p>
+
+        </div>
+        <div>
+            <button type="button" onclick="fechar()">Fechar</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <h2>Confeitaria Sempre Doce</h2>
+            <p>Doces feitos com carinho para deixar seus momentos mais especiais.</p>
+        </div>
+        <div class="footer-contact">
+            <h3>Fale conosco</h3>
+            <a href="mailto:contato@sempredoce.com">contato@sempredoce.com</a>
+            <a href="tel:+5500000000000">(00) 00000-0000</a>
+        </div>
+        <div class="footer-links">
+            <h3>Navegação</h3>
+            <a href="../index.html">Início</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="cardapio.html">Cardápio</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../JS/cardapio.js"></script>
+</body>
+
+</html>
