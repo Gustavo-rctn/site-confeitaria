@@ -122,12 +122,14 @@
     max-width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2;
+    text-align: center;
 }
 
 .modal h2 {
 	margin: 0 0 14px;
 	color: #1e0905;
 	font-size: 26px;
+	text-align: center;
 }
 
 .modal p {
@@ -135,6 +137,15 @@
 	color: #1e0905;
 	font-size: 15px;
 	line-height: 1.5;
+	text-align: center;
+}
+
+.modal img {
+	display: block;
+	width: min(220px, 100%);
+	margin: 0 auto 18px;
+	border-radius: 12px;
+	box-shadow: 0 12px 18px rgba(30, 9, 5, 0.12);
 }
 
 .modal button {
@@ -144,5 +155,12 @@
 	background-color: #fb9f95;
 	color: #1e0905;
 	cursor: pointer;
+	display: block;
+	margin: 0 auto;
+}
+
+
+.fechar {
+	text-align: right;
 }
 

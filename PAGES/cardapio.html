@@ -44,7 +44,7 @@
                 </p>
                 <h4>R$ 55,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo de Chocolate" data-pix-image="../IMG/qrcode-pix.png" data-pix-alt="QR code do Bolo de Chocolate" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
             <div class="menu-cardapio-item">
@@ -55,7 +55,7 @@
                 </p>
                 <h4>R$ 80,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo de Morango" data-pix-image="../IMG/qrcode-pix (1).png" data-pix-alt="QR code do Bolo de Morango" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
             <div class="menu-cardapio-item">
@@ -66,7 +66,7 @@
                 </p>
                 <h4>R$ 105,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo Kinder Bueno" data-pix-image="../IMG/qrcode-pix (2).png" data-pix-alt="QR code do Bolo Kinder Bueno" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
             <div class="menu-cardapio-item">
@@ -75,7 +75,7 @@
                 <p>Bolo macio de cenoura com uma deliciosa cobertura de chocolate</p>
                 <h4>R$ 48,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo de Cenoura" data-pix-image="../IMG/qrcode-pix (3).png" data-pix-alt="QR code do Bolo de Cenoura" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
             <div class="menu-cardapio-item">
@@ -84,7 +84,7 @@
                 <p>Massa leve com coco e cobertura cremosa para deixar tudo mais gostoso</p>
                 <h4>R$ 62,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo de Coco" data-pix-image="../IMG/qrcode-pix (4).png" data-pix-alt="QR code do Bolo de Coco" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
             <div class="menu-cardapio-item">
@@ -93,21 +93,19 @@
                 <p>Recheio cremoso de leite Ninho & Abacaxi em uma receita delicada e especial</p>
                 <h4>R$ 89,90</h4>
                 <div class="fazer-pedido">
-                    <button type="button" onclick="abrir()">Fazer Pedido</button>
+                    <button type="button" data-product="Bolo de Leite Ninho" data-pix-image="../IMG/qrcode-pix (5).png" data-pix-alt="QR code do Bolo de Leite Ninho" onclick="abrir(this)">Fazer Pedido</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <div id="fade" class="hide">
+    <div id="fade" class="fade hide"></div>
 
-    </div>
-
-    <div id="modal" class="hide">
+    <div id="modal" class="modal hide">
         <div>
             <h2>Realizar pagamento</h2>
             <p>Entre em contato para confirmar seu pedido e receber as formas de pagamento.</p>
-
+            <img src="../IMG/qrcode-pix.png" alt="QR code do pedido" id="pix-image">
         </div>
         <div>
             <button type="button" onclick="fechar()">Fechar</button>
