@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contato | Confeitaria Sempre Doce</title>
 	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/formulario.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+		rel="stylesheet">
 </head>
+
 <body>
 	<header>
 		<div class="div-logo">
@@ -27,13 +32,117 @@
 		</div>
 	</header>
 
-	<main class="page-content contato">
-		<h2>Entre em contato</h2>
-		<p>Estamos prontos para ajudar a escolher o doce perfeito para sua ocasião.</p>
-		<div class="contact-links">
-			<a href="mailto:contato@sempredoce.com">contato@sempredoce.com</a>
-			<a href="tel:+5500000000000">(00) 00000-0000</a>
+	<h1 class="form-title">Formulário de Contato</h1>
+
+	<form>
+		<div class="container">
+
+			<fieldset>
+				<legend>Dados</legend>
+
+				<div>
+					<label>Primeiro nome: </label>
+					<input type="text">
+				</div>
+
+				<div>
+					<label>Último nome: </label>
+					<input type="text">
+				</div>
+
+				<div>
+					<label>Telefone: </label>
+					<input type="tel">
+				</div>
+
+				<div class="field-checkbox">
+					<label>WhatsApp: </label>
+					<input type="checkbox" class="checkbox">
+				</div>
+
+				<div>
+					<label>Idade: </label>
+					<input type="number" min="10" max="120">
+				</div>
+
+				<div>
+					<label>Email: </label>
+					<input type="email">
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<div>
+					<label>Preferencia de recebimento:</label>
+					<select>
+						<option> -- Selecione como receber -- </option>
+						<option>Buscar na loja</option>
+						<option>Entregar em casa</option>
+					</select>
+				</div>
+
+			</fieldset>
+
 		</div>
-	</main>
+
+
+		<div class="container">
+			<fieldset>
+				<legend>Dados do Endereço</legend>
+
+				<div>
+					<label>CEP:</label>
+					<input id="cep" type="text" placeholder="00000-000" inputmode="numeric" maxlength="9"
+						autocomplete="postal-code" aria-describedby="cep-feedback">
+					<p id="cep-feedback" class="cep-feedback" aria-live="polite"></p>
+				</div>
+
+				<div>
+					<label>Logradouro:</label>
+					<input id="logradouro" type="text">
+				</div>
+
+				<div>
+					<label>Número:</label>
+					<input type="text">
+				</div>
+
+				<div>
+					<label>Bairro:</label>
+					<input id="bairro" type="text">
+				</div>
+
+				<div>
+					<label>Cidade:</label>
+					<input id="cidade" type="text">
+				</div>
+
+				<div>
+					<label>Estado:</label>
+					<input id="estado" type="text">
+				</div>
+
+				<div>
+					<label>UF:</label>
+					<input id="uf" type="text">
+				</div>
+
+
+
+			</fieldset>
+
+			<div class="container-botoes">
+				<button type="submit" onclick="cadastrar(event)">Cadastrar</button>
+				<button type="reset">Limpar Formulário</button>
+			</div>
+
+		</div>
+
+	</form>
+
+
+	<script src="../JS/formulario.js" defer></script>
 </body>
+
 </html>

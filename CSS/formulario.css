@@ -1,0 +1,211 @@
+.form-title {
+	width: min(92%, 1080px);
+	margin: 42px auto 28px;
+	color: #fb9f95;
+	font-family: 'Playfair Display', serif;
+	font-size: clamp(32px, 4vw, 44px);
+}
+
+form {
+	width: min(100%, 1120px);
+	margin: 0 auto;
+	padding: 0 20px;
+	color: #3b1712;
+}
+
+form .container {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 24px;
+	margin-bottom: 24px;
+}
+
+form .container:first-child {
+	grid-template-columns: 1.7fr 1fr;
+}
+
+form .container:nth-child(2) {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+form .container:nth-child(2) fieldset {
+	width: min(100%, 760px);
+	justify-self: center;
+}
+
+form .container:nth-child(2) .container-botoes {
+	justify-content: center;
+}
+
+form fieldset {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-content: start;
+	gap: 18px 16px;
+	min-width: 0;
+	padding: 28px;
+	background: #fff8f5;
+	border: 1px solid rgba(251, 159, 149, 0.75);
+	border-radius: 18px;
+	box-shadow: 0 14px 30px rgba(30, 9, 5, 0.2);
+}
+
+form legend {
+	padding: 0 10px;
+	color: #6a2920;
+	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	font-weight: 700;
+	background: #fff8f5;
+    border-radius: 10px;
+}
+
+form fieldset > div {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	gap: 8px;
+}
+
+form .cep-feedback {
+	min-height: 0;
+	margin: 0;
+	color: #6a2920;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+form .container:first-child fieldset:last-child > div {
+	grid-column: 1 / -1;
+}
+
+form label {
+	color: #52251f;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+form input:not([type="checkbox"]),
+form select,
+form textarea {
+	width: 100%;
+	min-height: 46px;
+	padding: 11px 13px;
+	color: #321510;
+	font: inherit;
+	background: #ffffff;
+	border: 1px solid #dfb8b1;
+	border-radius: 9px;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible {
+	outline: none;
+	border-color: #a84336;
+	box-shadow: 0 0 0 3px rgba(251, 159, 149, 0.35);
+}
+
+form .field-checkbox {
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+form .checkbox {
+	width: 20px;
+	height: 20px;
+	accent-color: #a84336;
+	cursor: pointer;
+}
+
+form fieldset > label,
+form fieldset > textarea {
+	grid-column: 1 / -1;
+}
+
+form .container-botoes {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+form button {
+	min-height: 48px;
+	padding: 11px 22px;
+	color: #fff8f5;
+	font: inherit;
+	font-weight: 700;
+	background: #6a2920;
+	border: 1px solid #6a2920;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+form button:hover {
+	background: #8b382d;
+	transform: translateY(-2px);
+}
+
+form button:focus-visible {
+	outline: 3px solid #fb9f95;
+	outline-offset: 3px;
+}
+
+form button[type="reset"] {
+	color: #9e3b2e;
+	background: transparent;
+}
+
+form button[type="reset"]:hover {
+	color: #fff8f5;
+}
+
+@media (max-width: 720px) {
+	.form-title {
+		margin-top: 32px;
+	}
+
+	form .container {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	form .container:first-child {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	form {
+		padding: 0 16px;
+	}
+
+	form fieldset {
+		grid-template-columns: 1fr;
+		padding: 22px 18px;
+	}
+
+	form fieldset > label,
+	form fieldset > textarea,
+	form .container-botoes {
+		grid-column: 1;
+	}
+
+	form .container-botoes {
+		flex-direction: column;
+	}
+
+	form button {
+		width: 100%;
+	}
+}
